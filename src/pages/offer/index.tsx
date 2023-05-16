@@ -1,29 +1,12 @@
 import Head from "next/head";
-import { useEffect, useState } from "react";
 import Image from "next/image";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import styles from "@/styles/Home.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
-  const [router, setRouter] = useState<any>();
-  useEffect(
-    () =>
-      setRouter(
-        createBrowserRouter([
-          {
-            path: "confirmation/",
-            element: <div>ROUTE /confirmation</div>,
-          },
-          { path: "validation/", element: <div>ROUTE /validation</div> },
-          { path: "/", element: <div>ROUTE /</div> },
-        ])
-      ),
-    []
-  );
+export default function Offer() {
   return (
     <>
       <Head>
@@ -42,8 +25,7 @@ export default function Home() {
           </li>
         </ul>
         <div className={styles.description}>
-          <p>HOME</p>
-          {router && <RouterProvider router={router} />}
+          <p>OFFER</p>
         </div>
       </main>
     </>
